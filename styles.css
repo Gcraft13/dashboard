@@ -7,7 +7,7 @@
 .container {
   display: grid;
   height: 100vh;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 4fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   background-color: lightgray;
   border: 5px solid black;
@@ -23,11 +23,18 @@
   grid-row: 1/5;
   background-color: blue;
   border: 5px solid black;
+  color: white;
+  list-style-type: none;
 }
 
 .main {
   display: grid;
   grid-area: 2/2/4/3;
+  grid-template-columns: 1fr, 1fr;
+  grid-template-rows: 1fr, 1fr, 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 5px;
 }
 
 .announcements {
