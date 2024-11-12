@@ -3,3 +3,41 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  background-color: lightgray;
+  border: 5px solid black;
+}
+
+.header {
+  grid-column: 2/5;
+  background-color: white;
+  border: 5px solid black;
+}
+
+#sidebar {
+  grid-row: 1/5;
+  background-color: blue;
+  border: 5px solid black;
+}
+
+.main {
+  display: grid;
+  grid-area: 2/2/4/3;
+}
+
+.announcements {
+  background-color: white;
+  border: 5px solid black;
+  grid-area: 2/3/4/3;
+}
+
+footer {
+  background-color: black;
+  grid-column: span 5;
+  color: white;
+}
