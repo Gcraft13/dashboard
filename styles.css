@@ -4,65 +4,57 @@
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100vh;
+  background-color: rgb(234, 240, 241);
+}
+
 .container {
   display: grid;
-  height: 100vh;
-  grid-template-columns: 1fr 4fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  background-color: lightgray;
-  border: 5px solid black;
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: 1fr 6fr;
+  height: 100%;
 }
 
-.header {
-  grid-column: 2/5;
-  background-color: white;
-  border: 5px solid black;
-}
-
-#sidebar {
-  grid-row: 1/5;
-  background-color: blue;
-  border: 5px solid black;
-  color: white;
-
+.sidebar {
   position: sticky;
+  background-color: blue;
+  color: white;
   padding: 20px 0px 0px 20px;
+  height: 100vh;
+  font-size: large;
+  font-weight: bold;
+  top: 0px;
+}
+.top ul {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-bottom: 40px;
 }
 
-#sidebar ul {
+.bottom ul {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.top ul,
+.bottom ul {
   list-style-type: none;
 }
 
-.main {
-  display: grid;
-  grid-area: 2/2/4/3;
-  grid-template-columns: 3fr, 1fr;
-
-  align-items: center;
-  justify-items: center;
-  gap: 5px;
+.top li,
+.bottom li {
+  padding-left: 5px;
 }
 
-.announcements {
-  background-color: white;
-  border: 5px solid black;
-  grid-area: 2/3/4/3;
-}
-
-.content-card {
-  /* width: clamp(400px, calc(50% - 24px), 1000px);
-  height: 250px; */
-  background-color: white;
-  border-left: 10px #21adcb solid;
-  padding: 20px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0px 5px 5px rgb(214, 214, 214);
-}
-
-footer {
-  background-color: black;
-  grid-column: span 5;
+li img {
+  vertical-align: sub;
   color: white;
+  width: 25px; /* to help align svgs better to the current text*/
+}
+
+.content {
+  display: flex;
 }
