@@ -25,10 +25,10 @@ body {
   height: 100vh;
   top: 0px;
   grid-area: sidebar;
-  background-color: blue;
+  background-color: #78b3ce;
   align-self: start;
   position: sticky;
-  color: white;
+  color: #fbf8ef;
   padding: 20px 0 0 20px;
 }
 
@@ -57,7 +57,7 @@ a:hover {
   top: 0px;
   position: sticky;
   grid-area: header;
-  background-color: gray;
+  background-color: #ae445a;
   color: white;
   padding: 1em;
   display: grid;
@@ -68,6 +68,20 @@ a:hover {
 
 .search {
   grid-area: 1/1/3/2;
+}
+.search input {
+  border-radius: 12px;
+  width: 75%;
+  padding: 3px;
+}
+
+.search-button {
+  border-radius: 20px;
+  padding: 3px;
+}
+
+.search-button img {
+  width: 20px;
 }
 
 .logos {
@@ -84,7 +98,7 @@ a:hover {
   grid-area: 3/2/3/3;
 }
 .buttons button {
-  background-color: #008cba;
+  background-color: #4b4376;
   border-radius: 50%;
   color: white;
   padding: 10px;
@@ -93,42 +107,59 @@ a:hover {
 
 .news {
   grid-area: news;
-  background-color: pink;
-  grid-template-rows: 3;
+  background-color: #8b5dff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 0 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.news h2 {
+  padding-bottom: 15px;
+}
+
+.news div {
+  padding-bottom: 30px;
+  padding-right: 15px;
+  margin: 20px;
+  text-align: left;
 }
 
 main {
   grid-area: main;
-  background-color: aqua;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  background-color: #f96e2a;
 }
 
 .projects {
   display: grid;
   grid-area: 2/1/4/3;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas:
-    "card card"
-    "card card"
-    "card card";
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 20px;
 }
 
 .content-card {
   background-color: white;
-  grid-area: card;
   border-radius: 5px;
-  text-align: center;
+  text-align: left;
+  padding: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.left-content {
-  grid-area: 1/1/2/4;
+.content-card img {
+  width: 20px;
 }
 
-.right-content {
-  grid-area: 1/1/2/4;
+.symbols {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  gap: 20px;
+}
+
+main h2 {
+  padding: 25px;
 }
 
 @media (max-width: 800px) {
