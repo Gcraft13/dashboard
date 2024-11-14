@@ -5,56 +5,61 @@
 }
 
 body {
+  /* min-height: 100vh; use min-height so body can grow if there is more content, vh for viewport size */
   min-height: 100vh;
-  background-color: rgb(234, 240, 241);
-}
-
-.container {
   display: grid;
-  grid-template-columns: 1fr 6fr;
-  grid-template-rows: 1fr 6fr;
-  height: 100%;
+  grid-template-columns: 200px 4fr 1fr;
+  grid-template-rows: auto 1fr 1fr auto;
+  grid-template-areas:
+    "sidebar header header"
+    "sidebar main annoucments"
+    "sidebar main annoucments"
+    "sidebar footer footer";
 }
 
-.sidebar {
-  position: sticky;
-  background-color: blue;
-  color: white;
-  padding: 20px 0px 0px 20px;
+aside {
   height: 100vh;
-  font-size: large;
-  font-weight: bold;
   top: 0px;
+  grid-area: sidebar;
+  background-color: blue;
+  align-self: start;
+  position: sticky;
 }
-.top ul {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  padding-bottom: 40px;
-}
-
-.bottom ul {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.top ul,
-.bottom ul {
-  list-style-type: none;
-}
-
-.top li,
-.bottom li {
-  padding-left: 5px;
-}
-
-li img {
-  vertical-align: sub;
+nav {
+  top: 0px;
+  position: sticky;
+  grid-area: header;
+  background-color: gray;
   color: white;
-  width: 25px; /* to help align svgs better to the current text*/
+  padding: 1em;
 }
 
-.content {
-  display: flex;
+footer {
+  grid-area: footer;
+  background-color: black;
+  padding: 2em;
+}
+
+.annoucements {
+  grid-area: annoucments;
+  background-color: pink;
+}
+
+main {
+  grid-area: main;
+  background-color: aqua;
+}
+
+@media (max-width: 800px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+  aside {
+    position: fixed;
+    width: 300px;
+    display: none;
+  }
+  .show {
+    display: block;
+  }
 }
