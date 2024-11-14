@@ -57,12 +57,12 @@ a:hover {
   top: 0px;
   position: sticky;
   grid-area: header;
-  background-color: #ae445a;
-  color: white;
+  background-color: #feee91;
+  color: #10375c;
   padding: 1em;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -76,8 +76,9 @@ a:hover {
 }
 
 .search-button {
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 3px;
+  outline: none;
 }
 
 .search-button img {
@@ -99,15 +100,19 @@ a:hover {
 }
 .buttons button {
   background-color: #4b4376;
-  border-radius: 50%;
+
   color: white;
-  padding: 10px;
   font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+  outline: none;
 }
 
 .news {
   grid-area: news;
   background-color: #8b5dff;
+  color: white;
   display: flex;
   flex-direction: column;
   padding: 20px 0 0 20px;
@@ -127,7 +132,8 @@ a:hover {
 
 main {
   grid-area: main;
-  background-color: #6a42c2;
+  background-color: #fff7d1;
+  color: black;
 }
 
 .projects {
@@ -140,10 +146,16 @@ main {
 
 .content-card {
   background-color: white;
-  border-radius: 5px;
+  border-radius: 12px;
+  border-left: solid 10px #563a9c;
+  color: black;
   text-align: left;
   padding: 25px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.content-card:hover {
+  border-left: solid 10px green;
 }
 
 .content-card img {
